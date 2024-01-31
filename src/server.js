@@ -1,10 +1,15 @@
 import express from "express";
 import { consultarRouter } from "./routers/consultarRouter.js";
+import { adicionarRouter } from "./routers/adicionarRouter.js";
 
 const app = express()
 const port = 3000
 
+app.use(express.json())
+
 app.use('/consultar', consultarRouter)
+
+app.use('/adicionar', adicionarRouter)
 
 app.get('/', (req, res) => {
     res.send('Funcionando!')

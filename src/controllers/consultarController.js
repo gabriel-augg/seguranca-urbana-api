@@ -1,6 +1,6 @@
-import { db } from "../db/dados.js"
+import { retornarBD } from "./dbController.js"
 
-const bd = db()
+const bd = retornarBD() 
 
 function retornarDados(cep) {
   let dados = bd.find(dado => dado.cep == cep)
