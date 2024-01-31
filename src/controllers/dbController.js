@@ -19,7 +19,7 @@ function validar(cep){
     return false
 }
 
-function adicionarDados(bairro){
+function atualizarDB(bairro){
     let bairros = retornarBD()
     bairros.push(bairro)
     try {
@@ -29,8 +29,18 @@ function adicionarDados(bairro){
     }
 }
 
+function deletarDadoDB(cep){
+    let bairros = retornarBD()
+    const index = bairros.findIndex( obj => obj.cep == cep)
+    bairros.splice(index, 1)
+    try {
+        fs.writeFileSync(caminhoArquivo, JSON.stringify(bairros, null, 2))
+    } catch(err){
+        console.log(err)
+    }
+}
 
-export { retornarBD, adicionarDados, validar }
+export { retornarBD, atualizarDB, validar, deletarDadoDB }
 
 
 
