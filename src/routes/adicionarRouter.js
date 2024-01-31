@@ -1,17 +1,24 @@
 import { Router } from "express";
-import { criarBairro } from "../controllers/adicionarController.js";
+import { adicionarBairro } from "../controllers/adicionarController.js";
 import { validar } from "../controllers/dbController.js";
 
 const adicionarRouter = Router()
 
 adicionarRouter.post('/', (req, res) => {
     const { bairro, taxaCriminalidade, iluminacaoPublica, presencaPolicial, recomendacoesSeguranca, cep } = req.body
-    if(!validar(cep)){
-        const dado = criarBairro(bairro, taxaCriminalidade, iluminacaoPublica, presencaPolicial, recomendacoesSeguranca, cep)
-        res.json(dado)
+
+    const number = cep.toString()
+    
+    if(validar(cep)){
+        res.status(400).json({ error: 'O bairro não pode ser adicionar, pois já existe' })
+        return
+    } else if (number.length != 8){
+        res.status(400).json({ error: 'O bairro não pode ser adicionar, pois o tamanho do CEP é diferente de 8 caracteres.' })
         return
     }
-    res.status(400).json({ error: 'O bairro não pode ser adicionar, pois já existe' })
+    const dado = adicionarBairro(bairro, taxaCriminalidade, iluminacaoPublica, presencaPolicial, recomendacoesSeguranca, cep)
+    res.json(dado)
+
 })
 
 export { adicionarRouter }
