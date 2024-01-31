@@ -3,7 +3,7 @@ Essa api foi desenvolvida com o objetivo de alertar as pessoas sobre a seguranç
 
 ##### **IMPORTANTE!**
 
-> Antes de dar deploy no projeto, certifique-se de que você tem o Node e o npm instalado. Para verificar, basta digitar e executar no terminal: **_node -v_** e **_npm -v_**. Se após executar o comando retornar a versão, está instalado. Caso contrário, você deverá instalar o node ou/e o npm. E por fim, execute o comando "npm install" para instalar todas as depêndencias para o projeto funcionar corretamente.
+> Antes de dar deploy no projeto, certifique-se de que você tem o Node e o npm instalado. Para verificar, basta digitar e executar no terminal: **_node -v_** e **_npm -v_**. Se após executar o comando retornar a versão, está instalado. Caso contrário, você deverá instalar o node ou/e o npm. E por fim, execute o comando **_npm install_** para instalar todas as depêndencias para o projeto funcionar corretamente.
 
 ### Consumo da API
 
