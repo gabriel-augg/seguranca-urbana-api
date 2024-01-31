@@ -1,6 +1,6 @@
 import express from "express";
-import { consultarRouter } from "./routers/consultarRouter.js";
-import { adicionarRouter } from "./routers/adicionarRouter.js";
+import { consultarRouter } from "./routes/consultarRouter.js";
+import { adicionarRouter } from "./routes/adicionarRouter.js";
 
 const app = express()
 const port = 3000
