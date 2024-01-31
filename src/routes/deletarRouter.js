@@ -4,7 +4,7 @@ import { deletarBairro } from "../controllers/deletarController.js";
 
 const deletarRouter = Router()
 
-deletarRouter.delete('/:cep', (req, res) => {
+deletarRouter.delete('/cep/:cep', (req, res) => {
     const cep = parseInt(req.params.cep)
     if(validar(cep)){
         deletarBairro(cep)
