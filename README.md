@@ -11,7 +11,7 @@ Essa api foi desenvolvida com o objetivo de alertar as pessoas sobre a seguranç
 
 _12345678_, _23456789_, _34567890_, _45678901_, _56789012_, _67890123_, _78901234_, _89012345_, _90123456_, _01234567_ e _12345678_
 
-#### E para fazer a requisição, você deverá usar um dos CEPS desejado em um dos endpoints abaixo:
+#### E para fazer a requisição, você deverá usar um dos CEPS desejado em um dos endpoints abaixo utilizando o método http GET:
 
 _Rotorno de todos os dados_
 
@@ -33,7 +33,7 @@ _Retorno das recomendações de segurança e o nome do bairro_
 
 http://localhost:3000/consultar/recomendacoes/cep/12345678
 
-#### Se tudo estiver funcionando corretamente e você fizer uma requisição de todos os dados utilizando o primeiro CEP, o retorno deverá ser assim:
+#### Se tudo estiver funcionando corretamente e você fizer uma requisição de todos os dados através de uma ferramenta de debugging como **Insomnia** ou **Postman**, utilizando o primeiro CEP, o retorno deverá ser assim:
 
 
 ```
