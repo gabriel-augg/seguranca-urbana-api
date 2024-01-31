@@ -3,7 +3,7 @@ Essa api foi desenvolvida com o objetivo de alertar as pessoas sobre a seguranç
 
 ##### **IMPORTANTE!**
 
-> Antes de dar deploy no projeto, certifique-se de que você tem o Node e o npm instalado. Para verificar, basta digitar e executar no terminal: "node -v" e "npm -v". Se após executar o comando retornar a versão, está instalado. Caso contrário, você deverá instalar o node ou/e o npm. E por fim, execute o comando "npm install" para instalar todas as depêndencias para o projeto funcionar corretamente.
+> Antes de dar deploy no projeto, certifique-se de que você tem o Node e o npm instalado. Para verificar, basta digitar e executar no terminal: **_node -v_** e **_npm -v_**. Se após executar o comando retornar a versão, está instalado. Caso contrário, você deverá instalar o node ou/e o npm. E por fim, execute o comando "npm install" para instalar todas as depêndencias para o projeto funcionar corretamente.
 
 ### Consumo da API
 
@@ -11,7 +11,7 @@ Essa api foi desenvolvida com o objetivo de alertar as pessoas sobre a seguranç
 
 _12345678_, _23456789_, _34567890_, _45678901_, _56789012_, _67890123_, _78901234_, _89012345_, _90123456_, _01234567_ e _12345678_
 
-#### E para fazer a requisição, você deverá usar um dos endpoints abaixo, com o um dos CEPs desejado:
+#### E para fazer a requisição, você deverá usar um dos CEPS desejado em um dos endpoints abaixo:
 
 _Rotorno de todos os dados_
 
