@@ -1,7 +1,7 @@
 import fs from "fs"
 import { URL } from "url"
 
-const caminhoDB = new URL('../db/dados.json', import.meta.url)  
+const caminhoDB = new URL('../db/db_bairros.json', import.meta.url)  
 
 
 function retornarBD(){
