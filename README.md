@@ -23,7 +23,7 @@ Essa API foi desenvolvida com o objetivo de alertar as pessoas sobre a seguranç
 
 _12345678_, _23456789_, _34567890_, _45678901_, _56789012_, _67890123_, _78901234_, _89012345_, _90123456_, _01234567_ e _12345678_
 
-#### No entanto, para fazer a requisição, você deverá usar um dos CEPS desejado em um dos endpoints abaixo:
+#### No entanto, para fazer a requisição, você deverá usar um dos CEPs desejado como parâmetro em um dos endpoints abaixo:
 
 _Rotorno de todos os dados_
 
@@ -90,11 +90,11 @@ http://localhost:3000/adicionar
 
 ### **/PUT**
 
-#### Para atualizar um bairro existente, você deverá fazer o consumo da API aplicando o método PUT, fornecendo um JSON com as informações e o CEP do bairro que deseja atualizar. É possível atualizar todas as infromações ou então algumas específicas, no entanto a única informação que não é possível alterar é o CEP. 
+#### Para atualizar um bairro existente, você deverá fazer o consumo da API aplicando o método PUT, fornecendo um JSON com as informações e o CEP do bairro que deseja atualizar. É possível atualizar todas as informações ou então algumas específicas, no entanto a única informação que não é possível alterar é o CEP. 
 
 #### Esse método só funcionará corretamente se os atributos do objetivo forem passado de forma correta. 
 
-##### Atributos:
+##### Atributos que podem ser passado:
 
 **nomeBairro**, **taxaCriminalidade**, **iluminacaoPublica**, **presencaPolicial** e **recomendacoesSeguranca**.
 
