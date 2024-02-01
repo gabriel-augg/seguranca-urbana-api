@@ -92,6 +92,10 @@ http://localhost:3000/adicionar
 
 #### Esse método só funcionará corretamente se os atributos do objetivo forem passado de forma correta. 
 
+##### Atributos:
+
+**nomeBairro**, **taxaCriminalidade**, **iluminacaoPublica**, **presencaPolicial** e **recomendacoesSeguranca**.
+
 Segue abaixo o endpoint e um exemplo do corpo JSON:
 
 http://localhost:3000/atualizar
