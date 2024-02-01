@@ -119,49 +119,5 @@
       "Manter contato durante atividades ao ar livre"
     ],
     "cep": "12345678"
-  },
-  {
-    "bairro": "Santa Maria",
-    "taxaCriminalidade": 5.2,
-    "iluminacaoPublica": "Boa",
-    "presencaPolicial": "Baixa",
-    "recomendacoesSeguranca": [
-      "Não sai muito tarde",
-      "Sai durante o dia"
-    ],
-    "cep": 23132133
-  },
-  {
-    "bairro": "Industrial",
-    "taxaCriminalidade": 4.7,
-    "iluminacaoPublica": "Boa",
-    "presencaPolicial": "Baixa",
-    "recomendacoesSeguranca": [
-      "Não sai muito tarde",
-      "Sai durante o dia"
-    ],
-    "cep": 23132135
-  },
-  {
-    "bairro": "América",
-    "taxaCriminalidade": 4.7,
-    "iluminacaoPublica": "Boa",
-    "presencaPolicial": "Baixa",
-    "recomendacoesSeguranca": [
-      "Não sai muito tarde",
-      "Sai durante o dia"
-    ],
-    "cep": 23132131
-  },
-  {
-    "bairro": "América",
-    "taxaCriminalidade": 4.7,
-    "iluminacaoPublica": "Boa",
-    "presencaPolicial": "Baixa",
-    "recomendacoesSeguranca": [
-      "Não sai muito tarde",
-      "Sai durante o dia"
-    ],
-    "cep": 23132137
   }
 ]
