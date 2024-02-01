@@ -17,7 +17,7 @@ Essa API foi desenvolvida com o objetivo de alertar as pessoas sobre a seguranç
 
 ### **/GET**
 
-#### Para fazer o consumo da API utilizando o método http GET, você pode usar um CEP que foi adicionado ou então deverá usar um dos seguintes CEPs ficticios:
+#### Para fazer o consumo da API utilizando o método GET, você pode usar um CEP que foi adicionado ou então deverá usar um dos seguintes CEPs ficticios:
 
 _12345678_, _23456789_, _34567890_, _45678901_, _56789012_, _67890123_, _78901234_, _89012345_, _90123456_, _01234567_ e _12345678_
 
@@ -43,7 +43,7 @@ _Retorno das recomendações de segurança e o nome do bairro_
 
 http://localhost:3000/consultar/recomendacoes/cep/12345678
 
-#### Se tudo estiver funcionando corretamente e você fizer uma requisição de todos os dados através de uma ferramenta de debugging como **Insomnia** ou **Postman**, utilizando o primeiro CEP, o retorno deverá ser assim:
+#### Se tudo estiver funcionando corretamente e você fizer uma requisição de todos os dados através de uma ferramenta de debugging como **Insomnia** ou **Postman**, utilizando o primeiro CEP, o retorno deverá ser da sguinte forma:
 
 ##### Exemplo de retorno do corpo JSON
 
@@ -63,9 +63,9 @@ http://localhost:3000/consultar/recomendacoes/cep/12345678
 
 ### **/POST**
 
-#### Para adicionar um bairro de desejo a aplicação, você deverá fazer o consumo da API utilizando o método POST, fornecendo um JSON com todas as informações necesserárias, como: bairro, taxa de criminalidade, iluminação pública, presença policial, recomendações de segurança e o cep. 
+#### Para adicionar um bairro de desejo a aplicação, você deverá fazer o consumo da API utilizando o método POST, fornecendo um JSON com todas as informações necesserárias, como: nome do bairro, taxa de criminalidade, iluminação pública, presença policial, recomendações de segurança e o cep. 
 
-Segue abaixo um exemplo do endpoint e do corpo JSON:
+Segue abaixo o endpoint e um exemplo do corpo JSON:
 
 
 http://localhost:3000/adicionar
@@ -88,7 +88,9 @@ http://localhost:3000/adicionar
 
 ### **/PUT**
 
-#### Para atualizar um bairro existente, você deverá fazer o consumo da API utilizando o método PUT, fornecendo um JSON com as informações e o CEP do bairro que deseja atualizar.. Esse método só funcionará corretamente se os atributos do objetivo forem passado de forma correta. 
+#### Para atualizar um bairro existente, você deverá fazer o consumo da API utilizando o método PUT, fornecendo um JSON com as informações e o CEP do bairro que deseja atualizar. É possível atualizar todas as infromações ou então algumas específicas, no entanto a única informação que não é possível alterar é o CEP. 
+
+#### Esse método só funcionará corretamente se os atributos do objetivo forem passado de forma correta. 
 
 Segue abaixo o endpoint e um exemplo do corpo JSON:
 
@@ -107,7 +109,7 @@ http://localhost:3000/atualizar
 
 #### Para deletar um bairro existente, você deverá fazer o consumo da API utilizando o método DELETE, utilizando o endpoint com o CEP do bairro desejado como parâmetro.
 
-Segue abaixo um exemplo do endpoint com o CEP:
+Segue abaixo o endpoint com um exemplo de CEP:
 
 http://localhost:3000/deletar/cep/49044274
 
