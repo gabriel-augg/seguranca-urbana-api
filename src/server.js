@@ -21,7 +21,7 @@ app.get('/', (req, res) => {
     res.send('Funcionando!')
 })
 
-app.use(function (req, res, next) {
+app.use((req, res, next) => {
     res.status(400).send('400 HTTP, verifique o caminho')
 })
 
