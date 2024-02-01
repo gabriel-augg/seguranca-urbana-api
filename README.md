@@ -13,6 +13,8 @@ Essa API foi desenvolvida com o objetivo de alertar as pessoas sobre a seguranç
 
  Na organização da API, foi utilizado a arquitetura MVC, pela qual facilita a manutenção e organização da API.
 
+ Para iniciar a API, digite no terminal: **_npm start_**
+
 ### Consumo da API
 
 ### **/GET**
