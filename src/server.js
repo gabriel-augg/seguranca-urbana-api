@@ -5,7 +5,7 @@ import { deletarRouter } from "./routes/deletarRouter.js";
 import { atualizarRouter } from "./routes/atualizarRouter.js";
 
 const app = express()
-const port = 3000
+const porta = 3000
 
 app.use(express.json())
 
@@ -25,6 +25,6 @@ app.use(function (req, res, next) {
     res.status(400).send('400 HTTP, verifique o caminho')
 })
 
-app.listen(port, () => {
-    console.log(`App rodando na porta ${port}!`)
+app.listen(porta, () => {
+    console.log(`App rodando na porta ${porta}!`)
 })
