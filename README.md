@@ -93,7 +93,7 @@ http://localhost:3000/atualizar
 
 #### Para deletar um bairro existente, você deverá fazer o consumo da API utilizando o método DELETE, utilizando o endpoint com o CEP do bairro desejado como parâmetro. Segue abaixo um exemplo do endpoint com o CEP.
 
-http://localhost:3000/deletar/49044274
+http://localhost:3000/deletar/cep/49044274
 
 
 
