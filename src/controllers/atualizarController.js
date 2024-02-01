@@ -1,28 +1,27 @@
-import { atualizarDB } from "./dbController.js";
-import { retornarBD } from "./dbController.js";
+import { atualizarDB, retornarBD } from "./dbController.js";
 
-function atualizarBairro({bairro, taxaCriminalidade, iluminacaoPublica, presencaPolicial, recomendacoesSeguranca, cep }){
+function atualizarBairro({nomeBairro, taxaCriminalidade, iluminacaoPublica, presencaPolicial, recomendacoesSeguranca, cep }){
 
     let bairros = retornarBD()
 
-    for (const obj of bairros){
-        if (obj.cep == cep){
-            if(bairro){
-                obj.bairro = bairro
+    for (const bairro of bairros){
+        if (bairro.cep == cep){
+            if(nomeBairro){
+                bairro.nomeBairro = nomeBairro
             }
             if(taxaCriminalidade){
-                obj.taxaCriminalidade = taxaCriminalidade
+                bairro.taxaCriminalidade = taxaCriminalidade
             }
             if(iluminacaoPublica){
-                obj.iluminacaoPublica = iluminacaoPublica
+                bairro.iluminacaoPublica = iluminacaoPublica
             }
             if(presencaPolicial){
-                obj.presencaPolicial = presencaPolicial
+                bairro.presencaPolicial = presencaPolicial
             }
             if(recomendacoesSeguranca){
-                obj.recomendacoesSeguranca = recomendacoesSeguranca
+                bairro.recomendacoesSeguranca = recomendacoesSeguranca
             }
-            return obj
+            return bairro
         }
     }
     atualizarDB(bairros)

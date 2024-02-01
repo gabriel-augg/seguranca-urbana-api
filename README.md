@@ -1,5 +1,5 @@
 ## SEGURANÇA URBANA API
-Essa API foi desenvolvida com o objetivo de alertar as pessoas sobre a segurança urbana de determinados bairros, onde as pessoas podem colocar seus bairros e opinarem sobre a segurança urbana, com o objetivo de promover a segurança. Quando o usuário faz a requisição, supondo que seja GET, a API retorna algumas informações importantes em formato JSON como: __Nome do bairro__, __Taxa de criminalidade__, __Iluminação pública__, __Presença policial__, __Recomendações de segurança__ e o __CEP__.
+Essa API foi desenvolvida com o objetivo de alertar as pessoas sobre a segurança urbana de determinados bairros, onde as pessoas podem colocar seus bairros e opinarem sobre a segurança urbana, com o intuito de promover a segurança. Quando o usuário faz a requisição, supondo que seja GET, a API retorna algumas informações importantes em formato JSON como: __Nome do bairro__, __Taxa de criminalidade__, __Iluminação pública__, __Presença policial__, __Recomendações de segurança__ e o __CEP__.
 
 ##### **IMPORTANTE!**
 
@@ -40,7 +40,7 @@ http://localhost:3000/consultar/recomendacoes/cep/12345678
 
 ```
 {
-	"bairro": "Centro",
+	"nomeBairro": "Centro",
 	"taxaCriminalidade": 5.2,
 	"iluminacaoPublica": "Boa",
 	"presencaPolicial": "Alta",
@@ -63,7 +63,7 @@ http://localhost:3000/adicionar
 
 ```
 {
-	"bairro": "América",
+	"nomeBairro": "América",
 	"taxaCriminalidade": 2.2,
 	"iluminacaoPublica": "Boa",
 	"presencaPolicial": "Alta",
@@ -84,7 +84,7 @@ http://localhost:3000/atualizar
 
 ```
 {
-	"bairro": "Industrial",
+	"nomeBairro": "Industrial",
 	"cep": "49032345"
 }
 ```
@@ -93,7 +93,7 @@ http://localhost:3000/atualizar
 
 #### Para deletar um bairro existente, você deverá fazer o consumo da API utilizando o método DELETE, utilizando o endpoint com o CEP do bairro desejado como parâmetro. Segue abaixo um exemplo do endpoint com o CEP.
 
-http://localhost:3000/deletar/49044274
+http://localhost:3000/deletar/cep/49044274
 
 
 

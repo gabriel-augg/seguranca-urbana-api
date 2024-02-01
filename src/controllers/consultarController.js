@@ -9,22 +9,22 @@ function retornarDados(cep) {
 
 function retornarTaxaCriminalidade(cep) {
   let dados = bd.find(dado => dado.cep == cep)
-  return { bairro: dados.bairro, taxaCriminalidade: dados.taxaCriminalidade }
+  return { nomeBairro: dados.nomeBairro, taxaCriminalidade: dados.taxaCriminalidade }
 }
 
 function retornarIluminacaoPublica(cep) {
   let dados = bd.find(dado => dado.cep == cep)
-  return { bairro: dados.bairro, iluminacaoPublica: dados.iluminacaoPublica }
+  return { nomeBairro: dados.nomeBairro, iluminacaoPublica: dados.iluminacaoPublica }
 }
 
 function retornarPresencaPolicial(cep) {
   let dados = bd.find(dado => dado.cep == cep)
-  return { bairro: dados.bairro, presencaPolicial: dados.presencaPolicial }
+  return { nomeBairro: dados.nomeBairro, presencaPolicial: dados.presencaPolicial }
 }
 
 function retornarRecomendacoes(cep) {
   let dados = bd.find(dado => dado.cep == cep)
-  return { bairro: dados.bairro, recomendacao: dados.recomendacoesSeguranca }
+  return { nomeBairro: dados.nomeBairro, recomendacao: dados.recomendacoesSeguranca }
 }
 
 

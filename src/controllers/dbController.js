@@ -1,19 +1,19 @@
 import fs from "fs"
 import { URL } from "url"
 
-const caminhoArquivo = new URL('../db/dados.json', import.meta.url)  
+const caminhoDB = new URL('../db/dados.json', import.meta.url)  
 
 
 function retornarBD(){
-    const dados = fs.readFileSync(caminhoArquivo, 'utf-8')
-    const bairros = JSON.parse(dados)
+    const dadosDB = fs.readFileSync(caminhoDB, 'utf-8')
+    const bairros = JSON.parse(dadosDB)
     return bairros
 }
 
-function validar(cep){
+function validarSeExiste(cep){
     const bairros = retornarBD()
-    const bairro = bairros.filter( obj => obj.cep == cep )
-    if(bairro.length){
+    const bairroEncontrado = bairros.filter( bairro => bairro.cep == cep )
+    if(bairroEncontrado.length){
         return true
     }
     return false
@@ -23,7 +23,7 @@ function atualizarDB(bairro){
     let bairros = retornarBD()
     bairros.push(bairro)
     try {
-        fs.writeFileSync(caminhoArquivo, JSON.stringify(bairros, null, 2))
+        fs.writeFileSync(caminhoDB, JSON.stringify(bairros, null, 2))
     } catch(err){
         console.log(err)
     }
@@ -31,16 +31,16 @@ function atualizarDB(bairro){
 
 function deletarDadoDB(cep){
     let bairros = retornarBD()
-    const index = bairros.findIndex( obj => obj.cep == cep)
+    const index = bairros.findIndex( bairro => bairro.cep == cep)
     bairros.splice(index, 1)
     try {
-        fs.writeFileSync(caminhoArquivo, JSON.stringify(bairros, null, 2))
+        fs.writeFileSync(caminhoDB, JSON.stringify(bairros, null, 2))
     } catch(err){
         console.log(err)
     }
 }
 
-export { retornarBD, atualizarDB, validar, deletarDadoDB }
+export { retornarBD, atualizarDB, validarSeExiste, deletarDadoDB }
 
 
 

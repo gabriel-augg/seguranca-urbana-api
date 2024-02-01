@@ -1,6 +1,6 @@
 [
   {
-    "bairro": "Centro",
+    "nomeBairro": "Centro",
     "taxaCriminalidade": 5.2,
     "iluminacaoPublica": "Boa",
     "presencaPolicial": "Alta",
@@ -11,7 +11,7 @@
     "cep": "12345678"
   },
   {
-    "bairro": "Jardim das Flores",
+    "nomeBairro": "Jardim das Flores",
     "taxaCriminalidade": 2.1,
     "iluminacaoPublica": "Moderada",
     "presencaPolicial": "Média",
@@ -22,7 +22,7 @@
     "cep": "23456789"
   },
   {
-    "bairro": "Vila Nova",
+    "nomeBairro": "Vila Nova",
     "taxaCriminalidade": 7.4,
     "iluminacaoPublica": "Ruim",
     "presencaPolicial": "Baixa",
@@ -33,7 +33,7 @@
     "cep": "34567890"
   },
   {
-    "bairro": "Parque das Aves",
+    "nomeBairro": "Parque das Aves",
     "taxaCriminalidade": 1.5,
     "iluminacaoPublica": "Boa",
     "presencaPolicial": "Alta",
@@ -44,7 +44,7 @@
     "cep": "45678901"
   },
   {
-    "bairro": "Cidade Industrial",
+    "nomeBairro": "Cidade Industrial",
     "taxaCriminalidade": 8.9,
     "iluminacaoPublica": "Moderada",
     "presencaPolicial": "Média",
@@ -55,7 +55,7 @@
     "cep": "56789012"
   },
   {
-    "bairro": "Praia do Sol",
+    "nomeBairro": "Praia do Sol",
     "taxaCriminalidade": 3.2,
     "iluminacaoPublica": "Boa",
     "presencaPolicial": "Alta",
@@ -66,7 +66,7 @@
     "cep": "67890123"
   },
   {
-    "bairro": "Alto da Colina",
+    "nomeBairro": "Alto da Colina",
     "taxaCriminalidade": 4.3,
     "iluminacaoPublica": "Boa",
     "presencaPolicial": "Moderada",
@@ -77,7 +77,7 @@
     "cep": "78901234"
   },
   {
-    "bairro": "Bosque das Árvores",
+    "nomeBairro": "Bosque das Árvores",
     "taxaCriminalidade": 2.8,
     "iluminacaoPublica": "Boa",
     "presencaPolicial": "Alta",
@@ -88,7 +88,7 @@
     "cep": "89012345"
   },
   {
-    "bairro": "Nova Esperança",
+    "nomeBairro": "Nova Esperança",
     "taxaCriminalidade": 3.9,
     "iluminacaoPublica": "Moderada",
     "presencaPolicial": "Baixa",
@@ -99,7 +99,7 @@
     "cep": "90123456"
   },
   {
-    "bairro": "Vista Mar",
+    "nomeBairro": "Vista Mar",
     "taxaCriminalidade": 1.7,
     "iluminacaoPublica": "Boa",
     "presencaPolicial": "Alta",
@@ -110,7 +110,7 @@
     "cep": "01234567"
   },
   {
-    "bairro": "Monte Verde",
+    "nomeBairro": "Monte Verde",
     "taxaCriminalidade": 5.5,
     "iluminacaoPublica": "Ruim",
     "presencaPolicial": "Média",
@@ -119,5 +119,16 @@
       "Manter contato durante atividades ao ar livre"
     ],
     "cep": "12345678"
+  },
+  {
+    "nomeBairro": "Santa Maria",
+    "taxaCriminalidade": 5.2,
+    "iluminacaoPublica": "Boa",
+    "presencaPolicial": "Baixa",
+    "recomendacoesSeguranca": [
+      "Não saia muito tarde à noite",
+      "Sai durante o dia"
+    ],
+    "cep": 49044274
   }
 ]
