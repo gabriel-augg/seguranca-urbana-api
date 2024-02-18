@@ -1,5 +1,4 @@
-
-class Bairro {
+export default class Bairro {
     constructor(nomeBairro, taxaCriminalidade, iluminacaoPublica, presencaPolicial, recomendacoesSeguranca, cep){
         this.nomeBairro = nomeBairro
         this.taxaCriminalidade = taxaCriminalidade
@@ -9,5 +8,3 @@ class Bairro {
         this.cep = cep
     }
 }
-
-export { Bairro }

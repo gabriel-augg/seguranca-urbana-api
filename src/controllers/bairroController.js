@@ -1,4 +1,4 @@
-import { Bairro } from "../models/bairroModels.js";
+import { Bairro } from "../models/bairroModel.js";
 import { atualizarDB, retornarBD, deletarDadoDB, validarSeExiste } from "../helpers/dbHelper.js";
 
 export default class bairroController {
