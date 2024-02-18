@@ -5,23 +5,26 @@ const caminhoDB = new URL('../db/db_bairros.json', import.meta.url)
 
 
 function retornarBD(){
-    const dadosDB = fs.readFileSync(caminhoDB, 'utf-8')
-    const bairros = JSON.parse(dadosDB)
-    return bairros
+    const dadosDB = fs.readFileSync(caminhoDB, 'utf-8') 
+    return JSON.parse(dadosDB)
 }
 
 function validarSeExiste(cep){
+
     const bairros = retornarBD()
-    const bairroEncontrado = bairros.filter( bairro => bairro.cep == cep )
-    if(bairroEncontrado.length){
+    const bairroEncontrado = bairros.find( bairro => bairro.cep == cep )
+
+    if(bairroEncontrado){
         return true
     }
     return false
 }
 
 function atualizarDB(bairro){
-    let bairros = retornarBD()
+
+    const bairros = retornarBD()
     bairros.push(bairro)
+
     try {
         fs.writeFileSync(caminhoDB, JSON.stringify(bairros, null, 2))
     } catch(err){
@@ -30,9 +33,12 @@ function atualizarDB(bairro){
 }
 
 function deletarDadoDB(cep){
-    let bairros = retornarBD()
+
+    const bairros = retornarBD()
     const index = bairros.findIndex( bairro => bairro.cep == cep)
+
     bairros.splice(index, 1)
+    
     try {
         fs.writeFileSync(caminhoDB, JSON.stringify(bairros, null, 2))
     } catch(err){
