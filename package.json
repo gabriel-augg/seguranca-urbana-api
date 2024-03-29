@@ -1,5 +1,5 @@
 {
-  "name": "Seguranca-urbana-api",
+  "name": "seguraca-urbana-api",
   "version": "1.0.0",
   "description": "",
   "main": "./src/server.js",
@@ -13,6 +13,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.4.5",
     "express": "^4.18.2",
     "mysql2": "^3.9.3",
     "sequelize": "^6.37.1"
