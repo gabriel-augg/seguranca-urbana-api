@@ -12,7 +12,7 @@ const Neighborhood = db.define("Neighborhood", {
         type: DataTypes.STRING,
         allowNull: false
     },
-    crimaRate: {
+    crimeRate: {
         type: DataTypes.FLOAT(3,1),
         allowNull: false
     },
@@ -29,20 +29,9 @@ const Neighborhood = db.define("Neighborhood", {
         allowNull: false
     },
     cep: {
-        type: DataTypes.NUMBER,
+        type: DataTypes.INTEGER,
         allowNull: false
     }
 })
 
 export default Neighborhood;
-
-// export default class Bairro {
-//     constructor(nomeBairro, taxaCriminalidade, iluminacaoPublica, presencaPolicial, recomendacoesSeguranca, cep){
-//         this.nomeBairro = nomeBairro
-//         this.taxaCriminalidade = taxaCriminalidade
-//         this.iluminacaoPublica = iluminacaoPublica
-//         this.presencaPolicial = presencaPolicial
-//         this.recomendacoesSeguranca = recomendacoesSeguranca
-//         this.cep = cep
-//     }
-// }

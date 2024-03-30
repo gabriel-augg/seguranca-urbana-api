@@ -1,10 +1,11 @@
 import Neighborhood from "../models/Neighborhood.js";
 
 export default class NeighborhoodController {
-    static async create(){
-        const { name, crimaRate, publicLight, policePresence, recommendation, cep } = req.body
+    static async create(req, res){
+        const { name, crimeRate, publicLight, policePresence, recommendation, cep } = req.body
 
-        if( !name || !crimaRate || !publicLight || !policePresence || !recommendation || !cep ){
+        if( !name || !crimeRate || !publicLight || !policePresence || !recommendation || !cep ){
+            console.log("caiu aqui")
             res.status(411).json({message: "error/unexpected-issue"})
             return
         }
@@ -19,7 +20,7 @@ export default class NeighborhoodController {
     
             const neighborhood = {
                 name,
-                crimaRate,
+                crimeRate,
                 publicLight,
                 policePresence,
                 recommendation,
@@ -37,7 +38,7 @@ export default class NeighborhoodController {
 
     }
     
-    static async getByCep(){
+    static async getByCep(req, res){
         const {cep} = req.params
 
         if( !cep ){
@@ -54,7 +55,7 @@ export default class NeighborhoodController {
         }
     }
 
-    static async getAll() {
+    static async getAll(req, res) {
         try {
             const neighborhoods = await Neighborhood.findAll()
             res.status(200).json({ neighborhoods: neighborhoods })
@@ -64,17 +65,16 @@ export default class NeighborhoodController {
         }
     }
 
-    static async getCrimeRate(){
+    static async getCrimeRate(req, res){
         const {cep} = req.params
+        console.log(cep)
         if( !cep ){
             res.status(411).json({message: "error/unexpected-issue"})
             return
         }
 
         try {
-            const neighborhood = await Neighborhood.findOne({where: {cep:cep}, include: {
-                attributes: ['name', 'crimeRate']
-            }})
+            const neighborhood = await Neighborhood.findOne({where: {cep:cep},attributes: ["name", "crimeRate"]})
             res.status(200).json({neighborhood: neighborhood})
         } catch (error) {
             console.log(error)
