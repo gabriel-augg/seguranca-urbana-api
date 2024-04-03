@@ -48,6 +48,10 @@ export default class NeighborhoodController {
         
         try {
             const neighborhood = await Neighborhood.findOne({where: {cep:cep}})
+            if(!neighborhood){
+                res.status(404).json({message: "error/not-found"})
+                return
+            }
             res.status(200).json({neighborhood: neighborhood})
         } catch (error) {
             console.log(error)
@@ -75,6 +79,12 @@ export default class NeighborhoodController {
 
         try {
             const neighborhood = await Neighborhood.findOne({where: {cep:cep},attributes: ["name", "crimeRate"]})
+            if(!neighborhood){
+                res.status(404).json({message: "error/not-found"})
+                return
+            }
+
+            console.log(neighborhood)
             res.status(200).json({neighborhood: neighborhood})
         } catch (error) {
             console.log(error)

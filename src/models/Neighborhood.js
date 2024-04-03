@@ -13,7 +13,7 @@ const Neighborhood = db.define("Neighborhood", {
         allowNull: false
     },
     crimeRate: {
-        type: DataTypes.FLOAT(3,1),
+        type: DataTypes.STRING,
         allowNull: false
     },
     publicLight: {
